@@ -110,7 +110,7 @@ func (c *MachineControllerImpl) Reconcile(machine *clusterv1.Machine) error {
 
 	exist, err := c.actuator.Exists(machine)
 	if err != nil {
-		glog.Errorf("Error checking existance of machine instance for machine object %v; %v", name, err)
+		glog.Errorf("Error checking existence of machine instance for machine object %v; %v", name, err)
 		return err
 	}
 	if exist {
